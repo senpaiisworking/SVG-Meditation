@@ -1,0 +1,107 @@
+// import fonts
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900&display=swap');
+// font-family: 'Yantramanav', sans-serif; 
+
+@import url('https://fonts.googleapis.com/css?family=Nobile:400,400i,500,500i,700,700i&display=swap');
+// font-family: 'Nobile', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+// font-family: 'Source Sans Pro', sans-serif;
+
+// default font families
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Yantramanav', sans-serif;  
+}
+
+h3 {
+  font-family: 'Nobile', sans-serif;
+}
+
+// default font-size
+
+body {
+  font-size: 1em;
+  line-height: 1.375em;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.05em;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 2fr 4fr 4fr 2fr;
+  grid-template-rows: auto;
+
+  .figure {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 40%;
+      height: auto;
+      
+      #person {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      #shadow {
+        transform-origin: center;
+        animation: scale 6s ease-in-out infinite;
+      }
+      
+    }
+
+  }
+
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@keyframes scale {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: scale(1);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: scale(0.9);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: scale(1);
+	}
+}
